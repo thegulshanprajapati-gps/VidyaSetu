@@ -1,19 +1,19 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/colleges/[id]/page": "app/colleges/[id]/page.js",
   "/colleges/page": "app/colleges/page.js",
+  "/colleges/[id]/page": "app/colleges/[id]/page.js",
   "/db-explorer/page": "app/db-explorer/page.js",
   "/login/page": "app/login/page.js",
   "/page": "app/page.js",
   "/reviews/page": "app/reviews/page.js",
   "/vacancies/page": "app/vacancies/page.js",
-  "/api/auth/login/route": "app/api/auth/login/route.js",
   "/api/auth/logout/route": "app/api/auth/logout/route.js",
   "/api/auth/me/route": "app/api/auth/me/route.js",
-  "/api/colleges/route": "app/api/colleges/route.js",
-  "/api/db-explorer/route": "app/api/db-explorer/route.js",
-  "/api/colleges/[id]/route": "app/api/colleges/[id]/route.js",
+  "/api/auth/login/route": "app/api/auth/login/route.js",
   "/api/stats/route": "app/api/stats/route.js",
+  "/api/db-explorer/route": "app/api/db-explorer/route.js",
+  "/api/colleges/route": "app/api/colleges/route.js",
+  "/api/vacancies/route": "app/api/vacancies/route.js",
   "/api/vacancies/[id]/route": "app/api/vacancies/[id]/route.js",
-  "/api/vacancies/route": "app/api/vacancies/route.js"
+  "/api/colleges/[id]/route": "app/api/colleges/[id]/route.js"
 }

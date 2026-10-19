@@ -16,14 +16,6 @@
       "static/chunks/486-f1ceaa66e5a2e80b.js",
       "static/chunks/app/layout-cf7e55255ec469af.js"
     ],
-    "/colleges/[id]/page": [
-      "static/chunks/webpack-971e6d9cbd654f80.js",
-      "static/chunks/618f8807-239a7338b1e2789f.js",
-      "static/chunks/364-dc4af84e4450445e.js",
-      "static/chunks/main-app-b1a571c79dbe69f0.js",
-      "static/chunks/486-f1ceaa66e5a2e80b.js",
-      "static/chunks/app/colleges/[id]/page-d071400f640bc02c.js"
-    ],
     "/colleges/page": [
       "static/chunks/webpack-971e6d9cbd654f80.js",
       "static/chunks/618f8807-239a7338b1e2789f.js",
@@ -31,6 +23,14 @@
       "static/chunks/main-app-b1a571c79dbe69f0.js",
       "static/chunks/486-f1ceaa66e5a2e80b.js",
       "static/chunks/app/colleges/page-446b9713ae05fccb.js"
+    ],
+    "/colleges/[id]/page": [
+      "static/chunks/webpack-971e6d9cbd654f80.js",
+      "static/chunks/618f8807-239a7338b1e2789f.js",
+      "static/chunks/364-dc4af84e4450445e.js",
+      "static/chunks/main-app-b1a571c79dbe69f0.js",
+      "static/chunks/486-f1ceaa66e5a2e80b.js",
+      "static/chunks/app/colleges/[id]/page-d071400f640bc02c.js"
     ],
     "/db-explorer/page": [
       "static/chunks/webpack-971e6d9cbd654f80.js",
