@@ -44,44 +44,44 @@ export default async function HomePage() {
   const latestNotices = newsItems.slice(0, 4);
 
   return (
-    <div className="space-y-12 pb-20">
+    <div className="space-y-8 pb-12 sm:space-y-12 sm:pb-20">
       
       {/* Premium Hero Section */}
-      <section className="relative overflow-hidden pt-12 pb-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800 bg-gradient-to-b from-blue-50/50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+      <section className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-blue-50/50 via-white to-slate-50 px-4 pb-12 pt-10 dark:border-slate-800 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 sm:px-6 sm:pb-16 sm:pt-12 lg:px-8">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-to-tr from-blue-500/10 via-indigo-500/15 to-sky-400/10 blur-[100px] pointer-events-none rounded-full" />
         
-        <div className="max-w-5xl mx-auto text-center space-y-6 relative z-10">
+        <div className="relative z-10 mx-auto max-w-5xl space-y-5 text-center sm:space-y-6">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-500/20 border border-blue-400/30 text-blue-700 dark:text-blue-300 text-xs font-bold shadow-xs">
-            <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-pulse" />
+          <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1.5 text-[10px] font-bold text-blue-700 shadow-xs dark:bg-blue-500/20 dark:text-blue-300 sm:px-4 sm:text-xs">
+            <Sparkles className="h-4 w-4 shrink-0 animate-pulse text-blue-600 dark:text-blue-400" />
             <span>VIDYASETU • BIHAR STATE HIGHER EDUCATION & FACULTY CAREER GATEWAY</span>
           </div>
 
-          <h1 className="text-3xl sm:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.15]">
+          <h1 className="text-3xl font-black leading-[1.12] text-slate-900 dark:text-white sm:text-5xl sm:leading-[1.15] xl:text-6xl">
             Gateway to Academic Excellence & <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 bg-clip-text text-transparent">Teaching Careers in Bihar</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
+          <p className="mx-auto max-w-2xl text-sm font-normal leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">
             One authoritative statewide network connecting qualified scholars and technical professionals with accredited universities, engineering colleges, and polytechnics.
           </p>
 
           {/* Interactive Search Box */}
-          <div className="bg-white/80 dark:bg-slate-900/90 backdrop-blur-md p-2.5 rounded-2xl shadow-xl shadow-slate-900/5 dark:shadow-blue-500/5 border border-slate-200 dark:border-slate-800 max-w-3xl mx-auto">
-            <form action="/vacancies" method="GET" className="flex flex-col sm:flex-row items-center gap-2">
-              <div className="flex items-center flex-1 w-full px-3.5 py-2.5 text-slate-700 dark:text-slate-200 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 focus-within:border-blue-500 transition-all">
-                <Search className="w-5 h-5 text-slate-400 mr-2.5 shrink-0" />
+          <div className="mx-auto w-full max-w-3xl rounded-2xl border border-slate-200 bg-white/80 p-2 shadow-xl shadow-slate-900/5 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/90 sm:p-2.5 dark:shadow-blue-500/5">
+            <form action="/vacancies" method="GET" className="flex flex-col items-stretch gap-2.5 md:flex-row">
+              <div className="flex min-w-0 w-full items-center rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-slate-700 transition-all focus-within:border-blue-500 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 md:flex-1 md:py-2.5">
+                <Search className="mr-2.5 h-5 w-5 shrink-0 text-slate-400" />
                 <input
                   type="text"
                   name="q"
-                  placeholder="Job designation (Assistant Professor, Lab Tech, Lecturer)..."
-                  className="w-full bg-transparent text-xs sm:text-sm focus:outline-none text-slate-900 dark:text-white placeholder:text-slate-400"
+                  placeholder="Job title, subject, or keyword"
+                  className="w-full min-w-0 bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none dark:text-white"
                 />
               </div>
 
-              <div className="flex items-center w-full sm:w-auto gap-2">
+              <div className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 md:flex md:w-auto">
                 <select
                   name="district"
-                  className="w-full sm:w-40 px-3 py-2.5 text-xs font-semibold bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-700 dark:text-slate-200 focus:outline-none focus:border-blue-500"
+                  className="w-full min-w-0 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-sm font-semibold text-slate-700 focus:border-blue-500 focus:outline-none dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 md:w-40 md:py-2.5"
                 >
                   <option value="">All Bihar Districts</option>
                   <option value="Patna">Patna</option>
@@ -94,7 +94,7 @@ export default async function HomePage() {
 
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md shadow-blue-500/25 transition-all flex items-center justify-center gap-1.5 shrink-0 active:scale-98"
+                  className="flex w-full shrink-0 items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:from-blue-500 hover:to-indigo-500 active:scale-98 md:w-auto md:py-2.5"
                 >
                   <span>Explore Jobs</span>
                   <ArrowRight className="w-4 h-4" />
@@ -128,47 +128,47 @@ export default async function HomePage() {
 
       {/* Interactive Sticky Telemetry Strip */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-900/5">
+        <div className="grid grid-cols-2 gap-2 rounded-3xl border border-slate-200 bg-white p-3 shadow-xl shadow-slate-900/5 dark:border-slate-800 dark:bg-slate-900 sm:gap-4 sm:p-5 md:grid-cols-4">
           
-          <div className="p-3 space-y-1">
-            <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs font-bold">
-              <Building2 className="w-4 h-4" />
+          <div className="min-w-0 space-y-1 p-2 sm:p-3">
+            <div className="flex min-w-0 flex-wrap items-center gap-1.5 text-[10px] font-bold text-blue-600 dark:text-blue-400 sm:gap-2 sm:text-xs">
+              <Building2 className="h-4 w-4 shrink-0" />
               <span>COLLEGES ONBOARDED</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+            <div className="text-xl font-black leading-tight text-slate-900 dark:text-white sm:text-3xl">
               {colleges.length} Verified
             </div>
             <span className="text-[11px] text-slate-500 dark:text-slate-400">Govt & Affiliated Campuses</span>
           </div>
 
-          <div className="p-3 space-y-1">
-            <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
-              <Briefcase className="w-4 h-4" />
+          <div className="min-w-0 space-y-1 p-2 sm:p-3">
+            <div className="flex min-w-0 flex-wrap items-center gap-1.5 text-[10px] font-bold text-emerald-600 dark:text-emerald-400 sm:gap-2 sm:text-xs">
+              <Briefcase className="h-4 w-4 shrink-0" />
               <span>ACTIVE OPENINGS</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+            <div className="text-xl font-black leading-tight text-slate-900 dark:text-white sm:text-3xl">
               {vacancies.length} Live Posts
             </div>
             <span className="text-[11px] text-slate-500 dark:text-slate-400">Teaching & Tech Circulars</span>
           </div>
 
-          <div className="p-3 space-y-1">
-            <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 text-xs font-bold">
-              <MessageSquare className="w-4 h-4" />
+          <div className="min-w-0 space-y-1 p-2 sm:p-3">
+            <div className="flex min-w-0 flex-wrap items-center gap-1.5 text-[10px] font-bold text-purple-600 dark:text-purple-400 sm:gap-2 sm:text-xs">
+              <MessageSquare className="h-4 w-4 shrink-0" />
               <span>COMMUNITY FORUM</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+            <div className="text-xl font-black leading-tight text-slate-900 dark:text-white sm:text-3xl">
               Active Network
             </div>
             <span className="text-[11px] text-slate-500 dark:text-slate-400">Candidate Peer Discussions</span>
           </div>
 
-          <div className="p-3 space-y-1">
-            <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 text-xs font-bold">
-              <ShieldCheck className="w-4 h-4" />
+          <div className="min-w-0 space-y-1 p-2 sm:p-3">
+            <div className="flex min-w-0 flex-wrap items-center gap-1.5 text-[10px] font-bold text-amber-600 dark:text-amber-400 sm:gap-2 sm:text-xs">
+              <ShieldCheck className="h-4 w-4 shrink-0" />
               <span>DATABASE INTEGRITY</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+            <div className="flex min-w-0 flex-wrap items-center gap-2 text-xl font-black leading-tight text-slate-900 dark:text-white sm:text-3xl">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
               Aiven Cloud
             </div>

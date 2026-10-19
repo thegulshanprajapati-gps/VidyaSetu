@@ -1,0 +1,1 @@
+{"version":1,"functions":{"/api/auth/logout":{},"/api/auth/me":{},"/api/colleges":{},"/api/colleges/[id]":{},"/api/db-explorer":{},"/api/stats":{},"/api/vacancies/[id]":{},"/api/auth/login":{},"/api/vacancies":{}}}

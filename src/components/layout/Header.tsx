@@ -124,14 +124,14 @@ export default function Header() {
 
       {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18">
+        <div className="flex h-16 items-center justify-between sm:h-[4.5rem]">
           
           {/* Logo & Portal Identity */}
-          <Link href="/" className="flex items-center space-x-3 group">
+          <Link href="/" className="group flex min-w-0 items-center space-x-3">
             <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-sky-400 text-white flex items-center justify-center shadow-md shadow-blue-500/20 group-hover:scale-105 transition-all">
               <GraduationCap className="w-6 h-6" />
             </div>
-            <div>
+            <div className="min-w-0">
               <div className="flex items-center gap-1.5">
                 <span className="text-xl font-black text-slate-900 dark:text-white tracking-tight">
                   VidyaSetu
@@ -140,14 +140,14 @@ export default function Header() {
                   BIHAR
                 </span>
               </div>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 -mt-0.5 font-medium">
+              <p className="-mt-0.5 max-w-[8.5rem] truncate text-[10px] font-medium text-slate-500 dark:text-slate-400 min-[375px]:max-w-[11rem] sm:max-w-none sm:text-[11px]">
                 Higher Education & Career Gateway
               </p>
             </div>
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden xl:flex items-center space-x-1">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
@@ -172,7 +172,7 @@ export default function Header() {
           </nav>
 
           {/* Action Area: Theme Toggle & Session Controls */}
-          <div className="hidden sm:flex items-center space-x-3">
+          <div className="hidden xl:flex items-center space-x-3">
             
             {/* Dark / Light Mode Toggle Button */}
             <button
@@ -242,7 +242,7 @@ export default function Header() {
           </div>
 
           {/* Mobile buttons: Theme toggle + Menu */}
-          <div className="flex sm:hidden items-center gap-2">
+          <div className="flex xl:hidden items-center gap-2">
             <button
               onClick={toggleTheme}
               type="button"
@@ -264,7 +264,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="sm:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-5 space-y-2">
+        <div className="xl:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-5 space-y-2">
           {sessionUser && (
             <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-xs text-blue-900 dark:text-blue-300 font-bold mb-2 flex items-center justify-between">
               <span>Signed in: {sessionUser.name}</span>

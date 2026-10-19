@@ -74,8 +74,8 @@ export default function VacancyCard({ vacancy }: VacancyCardProps) {
         </div>
 
         {/* Date & Actions Side */}
-        <div className="sm:text-right flex sm:flex-col items-center sm:items-end justify-between border-t sm:border-t-0 pt-3 sm:pt-0 border-slate-100 dark:border-slate-800 gap-3 min-w-[160px]">
-          <div>
+        <div className="flex min-w-0 flex-col items-stretch justify-between gap-3 border-t border-slate-100 pt-3 dark:border-slate-800 sm:min-w-[160px] sm:items-end sm:border-t-0 sm:pt-0 sm:text-right">
+          <div className="sm:text-right">
             <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">
               Last Date to Apply
             </div>
@@ -85,7 +85,7 @@ export default function VacancyCard({ vacancy }: VacancyCardProps) {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex w-full items-center gap-2 sm:w-auto">
             {vacancy.notificationPdfUrl && (
               <a 
                 href={vacancy.notificationPdfUrl}
@@ -99,7 +99,7 @@ export default function VacancyCard({ vacancy }: VacancyCardProps) {
             )}
             <Link
               href={`/vacancies/${vacancy.slug}`}
-              className="px-4 py-2 text-xs font-bold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl shadow-md shadow-blue-500/20 transition-all flex items-center gap-1 active:scale-98"
+              className="flex flex-1 items-center justify-center gap-1 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2 text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:from-blue-500 hover:to-indigo-500 active:scale-98 sm:flex-none"
             >
               <span>View Notice</span>
               <ChevronRight className="w-3.5 h-3.5" />
