@@ -34,6 +34,9 @@ export default async function HomePage() {
     prisma.communityPost.findMany({
       take: 3,
       orderBy: { createdAt: 'desc' },
+    }).catch((error: unknown) => {
+      console.error('Failed to load community posts:', error);
+      return [];
     }),
   ]);
 
